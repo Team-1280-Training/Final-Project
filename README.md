@@ -178,13 +178,15 @@ Again, get help from mentors when needed. We can:
 ___
 
 ## Feedback
-Please provide overall feedback for both the final project and **the whole course**.
+Please provide overall feedback for both the final project and **the whole course**. \
+Also, please give an estimate of how much time you spent on this project.
 
 Possible prompts: \
 Did the course meet your expectations? \
 How was the pacing and the amount of content? \
 Do you have any overall complaints about the teaching or structure? \
 Was enough external support given? \
+Describe how much effort, time, or commitment this course took. \
 Rate your experience with this course.
 ___
 
