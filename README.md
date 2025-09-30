@@ -21,11 +21,12 @@ At the start of the game, all cells are **hidden** (undug) and the player cannot
 Players can place **flags** on hidden cells that they think are mines, to help keep track of them. These are purely for the player's benefit: they are not required, and flags can potentially be placed incorrectly. A player can remove placed flags.
 
 If a player digs a mine, they instantly lose. \
+(In almost all Minesweeper implementations, all mine cells are revealed when the player loses, but this feature is optional for the project.) \
 The player wins when all safe cells in the grid are revealed. (Note: flags are irrelevant for this.)
 
 In almost all Minesweeper implementations, when a player digs a cell with 0 mine neighbours, all of its neighbours are dug automatically. This can chain, so large chunks of the grid may be cleared with a single dig.
 
-Use https://www.google.com/fbx?fbx=minesweeper as reference (note that certain features of it aren't required). Left click to dig, right click or ctrl + left click to flag. \
+Use https://www.google.com/fbx?fbx=minesweeper as reference (note that certain features of it aren't required). `LeftClick` to dig, `RightClick` or `Ctrl`+`LeftClick` to flag. \
 Play a few games to familiarize yourself.
 
 Two basic rules for solving:
@@ -90,7 +91,7 @@ The grid is displayed before each user turn, and is also displayed when the game
 ```
 9x9 grid, with 10 mines
 
-   1 2 3 4 5 6 7 8 9 
+    1 2 3 4 5 6 7 8 9 
   +-------------------+
 1 | # # # # # # # # # |
 2 | # # # # # # # # # |
