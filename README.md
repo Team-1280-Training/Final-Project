@@ -4,6 +4,7 @@ Create a program to play a text-based *Minesweeper*, a single player logic game.
 ### Table of Contents
 - [Rules of Minesweeper](#rules-of-minesweeper)
 - [Minimum Requirements](#minimum-requirements)
+    - [Optional Features](#optional-features)
 - [Sample Input/Output](#sample-inputoutput)
 - [Tips](#tips)
 
