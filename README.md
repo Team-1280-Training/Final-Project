@@ -21,7 +21,6 @@ At the start of the game, all cells are **hidden** (undug) and the player cannot
 Players can place **flags** on hidden cells that they think are mines, to help keep track of them. These are purely for the player's benefit: they are not required, and flags can potentially be placed incorrectly. A player can remove placed flags.
 
 If a player digs a mine, they instantly lose. \
-(In almost all Minesweeper implementations, all mine cells are revealed when the player loses, but this feature is optional for the project.) \
 The player wins when all safe cells in the grid are revealed. (Note: flags are irrelevant for this.)
 
 In almost all Minesweeper implementations, when a player digs a cell with 0 mine neighbours, all of its neighbours are dug automatically. This can chain, so large chunks of the grid may be cleared with a single dig.
@@ -29,9 +28,9 @@ In almost all Minesweeper implementations, when a player digs a cell with 0 mine
 Use https://www.google.com/fbx?fbx=minesweeper as reference (note that certain features of it aren't required). `LeftClick` to dig, `RightClick` or `Ctrl`+`LeftClick` to flag. \
 Play a few games to familiarize yourself.
 
-Two basic rules for solving:
-- If the number of hidden neighbours of a cell is equal to its number, then the hidden neighbours are all mines and should be flagged
-- If the number of flagged neighbours of a cell is equal to its number, then the remaining unflagged hidden neighbours are safe to dig
+As a player, there are two basic rules for solving:
+1. If the number of hidden neighbours of a cell is equal to its number, then the hidden neighbours are all mines and should be flagged
+2. If the number of flagged neighbours of a cell is equal to its number, then the remaining unflagged hidden neighbours are safe to dig
 
 These two rules are actually enough to solve most grids.
 
@@ -50,6 +49,14 @@ Additionally, in some implementations, it is possible for the player to hit a mi
 - The grid mine placement is randomly generated
 - In the codebase, all *code* is written by you: AI, tutorials, existing codebases, and other people cannot provide any of the code, though they may provide information.
     - Do not use any programming materials that are directly related to Minesweeper, such as Minesweeper codebases or "How to code Minesweeper" tutorials
+
+### Optional Features
+- Auto-clear ("*chording*"): If the player 'reveals' an already revealed cell, with a number exactly equal to how many neighbouring flags it has, then that action reveals all hidden neighbours. See basic solving rule number 2. (Note that chording could still dig a mine if a flag is misplaced.) \
+This speeds up playing a lot. The linked reference implementation does not have this feature, but most other implementations do.
+- When the player loses, reveal all mine cells (while keeping the rest of the grid the same)
+- Make the first dig always safe; if there is a mine, then move it somewhere else
+- Validate user input (cell coordinates, actions), asking the user to try again if input is invalid
+- Have multiple difficulty options (larger sizes with different mine percentages); needs new display format for 2 digit coordinates
 
 ## Sample Input/Output
 A good grid display (that you may mimic) is this:
@@ -83,7 +90,7 @@ Enter action, r for reveal, f for flag: r
 (The inputs are after the `: `, and on the same line.) \
 The user enters the row column coordinate pair. Then, they choose the action. \
 If the action is useless (e.g. revealing or flagging a dug cell), nothing happens. If the cell is flagged, then reveal action digs the cell ignoring the flag, while flag actions instead unflags the cell. \
-If the action is invalid (e.g. out of bounds coordinates or action other than `r` or `f`) then the program tells the user it is invalid and nothing happens. (These validation checks are not required.) (Certain invalid inputs still cause the program to crash, such as non-numeric coordinates) \
+If the action is invalid (e.g. out of bounds coordinates or action other than `r` or `f`) then the program tells the user it is invalid and nothing happens. (These validation checks are not required.) \
 The grid is displayed before each user turn, and is also displayed when the game ends.
 
 <details><summary>Example single game input/output</summary>
