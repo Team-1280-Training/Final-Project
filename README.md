@@ -163,10 +163,10 @@ Exiting.
 </details>
 
 ## Tips
-- This is a difficult project that focuses on your problem solving skills. **Ask for help from mentors if you are struggling.**
+- This is a difficult project that focuses on your problem solving skills. **Ask for help from instructors if you are struggling.**
 - A complex program like this needs to be structured well.
     - Try to plan out what collections, classes, etc. you will use, before you start writing; consider the requirements and mechanics.
-        - Not confident? Ask a mentor to critique your plans.
+        - Not confident? Ask an instructor to critique your plans.
     - Be keen on defining methods, to abstract and simplify code.
         - If something is done multiple times throughout the code, extract it into a method
         - If one of your methods is too large, split into different parts and then define methods for each
@@ -174,9 +174,9 @@ Exiting.
 - Nested for loops and indices will probably be used heavily, while OOP might not be used as much
 - This course taught all of the topics needed to create this project, though you may research and use other topics as well
 
-The purpose of this project is for mentors to assess your programming skills.
+The purpose of this project is for instructors to assess your programming skills.
 
-Again, get help from mentors when needed. We can:
+Again, get help from instructors when needed. We can:
 - Review code early to make sure you are on the right track
 - Help plan out the implementation and what will be needed
 - Provide pointers on how to implement difficult features
